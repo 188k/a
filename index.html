@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+  <title>请用浏览器打开</title>
+</head>
+<body>
+  <img src="./tztp.jpg" width="340" height="600" align="absmiddle">
+  <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"></div>
+  <script>
+    const k = document.location.toString();
+    const urlParmStr = k.slice(k.indexOf('=') + 1);
+    if (is_weixn_qq()) {
+      document.getElementById("tips").innerHTML = "请在浏览器打开本页面";
+    } else {
+     
+      // 不是微信客户端，直接可以访问链接
+
+  // 获取当前链接中的参数值
+  function getParameterByName(name) {
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  // 构建目标链接，并跳转
+  function redirectToTarget() {
+    var keyParam = getParameterByName('k');
+    if (keyParam) {
+      var targetUrl = 'http://wv75tq9e.yuncdn123.com/list.php?s=/lists&key=' + keyParam;
+      window.location.href = targetUrl;
+    } else {
+      // 如果没有找到参数，则可以执行其他操作或给出提示
+      alert('未找到参数 key。');
+    }
+  }
+
+  // 页面加载时调用跳转函数
+  redirectToTarget();
+ 
+    }
+    // 判断QQUA的代码无需修改
+    function is_weixn_qq() {
+      const ua = navigator.userAgent.toLowerCase();
+      if (ua.match(/MicroMessenger/i) == "micromessenger") {
+        return "weixin";
+      } else if (ua.match(/QQ/i) == "qq") {
+        return "QQ";
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>
