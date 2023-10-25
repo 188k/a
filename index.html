@@ -13,8 +13,7 @@
   <img src="./tztp.jpg" width="340" height="600" align="absmiddle">
   <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"></div>
   <script>
-    const k = document.location.toString();
-    const urlParmStr = k.slice(k.indexOf('=') + 1);
+  
     if (is_weixn_qq()) {
       document.getElementById("tips").innerHTML = "请在浏览器打开本页面";
     } else {
