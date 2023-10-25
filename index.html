@@ -8,6 +8,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
   <title>请用浏览器打开</title>
+  <style>
+body,html{width:100%;height:100%}
+*{margin:0;padding:0}
+body{background-color:#fff}
+.top-bar-guidance{font-size:15px;color:#fff;height:70%;line-height:1.8;padding-left:20px;padding-top:20px;background:url(//gw.alicdn.com/tfs/TB1eSZaNFXXXXb.XXXXXXXXXXXX-750-234.png) center top/contain no-repeat}
+.top-bar-guidance .icon-safari{width:25px;height:25px;vertical-align:middle;margin:0 .2em}
+.app-download-tip{margin:0 auto;width:290px;text-align:center;font-size:15px;color:#2466f4;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAcAQMAAACak0ePAAAABlBMVEUAAAAdYfh+GakkAAAAAXRSTlMAQObYZgAAAA5JREFUCNdjwA8acEkAAAy4AIE4hQq/AAAAAElFTkSuQmCC) left center/auto 15px repeat-x}
+.app-download-tip .guidance-desc{background-color:#fff;padding:0 5px}
+.app-download-btn{display:block;width:214px;height:40px;line-height:40px;margin:18px auto 0 auto;text-align:center;font-size:18px;color:#2466f4;border-radius:20px;border:.5px #2466f4 solid;text-decoration:none}
+    </style>
 </head>
 <body>
   
@@ -58,8 +68,12 @@
       return false;
     }
   </script>
-  <!--背景文件-->
+  <!--背景文件
   <img src="./tztp.jpg" width="340" height="600" align="absmiddle">
-  <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"></div>
+  <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"></div>   -->
+  <div class="top-bar-guidance">
+    <p>点击右上角<img class="icon-safari" src="./wj/0"> <span id="openm">浏览器打开</span></p>
+    <p>可以继续浏览本站哦~</p>
+</div>
 </body>
 </html>
