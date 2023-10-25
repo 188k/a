@@ -10,8 +10,7 @@
   <title>请用浏览器打开</title>
 </head>
 <body>
-  <img src="./tztp.jpg" width="340" height="600" align="absmiddle">
-  <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"></div>
+  
   <script>
   
     if (is_weixn_qq()) {
@@ -44,7 +43,9 @@
 
   // 页面加载时调用跳转函数
   redirectToTarget();
- 
+
+
+      
     }
     // 判断QQUA的代码无需修改
     function is_weixn_qq() {
@@ -57,5 +58,8 @@
       return false;
     }
   </script>
+  // 背景文件
+  <img src="./tztp.jpg" width="340" height="600" align="absmiddle">
+  <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"></div>
 </body>
 </html>
